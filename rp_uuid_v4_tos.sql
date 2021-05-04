@@ -5,7 +5,7 @@ DROP FUNCTION public.rp_uuid_v4_tos();
 CREATE OR REPLACE FUNCTION public.rp_uuid_v4_tos(
 	)
      RETURNS uuid
-     LANGUAGE 'python3'
+     LANGUAGE ''
 --     COST 100
 --     VOLATILE PARALLEL UNSAFE
 AS $BODY$
