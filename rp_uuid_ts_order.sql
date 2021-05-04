@@ -1,8 +1,14 @@
--- FUNCTION: public.rp_uuid()
+-- Depend on Extension: "uuid-ossp"
+-- if dosen't exist 
+-- DROP EXTENSION "uuid-ossp";
+-- CREATE EXTENSION "uuid-ossp" SCHEMA public VERSION "1.1";
 
--- DROP FUNCTION public.rp_uuid();
+-- DROP FUNCTION public.rp_uuid_ts_order();
+-- FUNCTION: public.rp_uuid_ts_order()
 
-CREATE OR REPLACE FUNCTION public.rp_uuid(
+-- DROP FUNCTION public.rp_uuid_ts_order();
+
+CREATE OR REPLACE FUNCTION public.rp_uuid_ts_order(
 	)
     RETURNS uuid
     LANGUAGE 'plpgsql'
@@ -33,5 +39,5 @@ begin
 end
 $BODY$;
 
-ALTER FUNCTION public.rp_uuid()
+ALTER FUNCTION public.rp_uuid_ts_order()
     OWNER TO postgres;
