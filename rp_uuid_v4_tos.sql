@@ -13,6 +13,7 @@ CREATE OR REPLACE FUNCTION public.rp_uuid_v4_tos(
 AS $BODY$
 begin
 -- 12345678-1234-v678-1234-567812345678
+-- 21050410-3450-4886-8976-642190401424
    return (to_char(NOW(), 'YYMMDDHH24MISS4US'::text) || substring( random()::text ,3,13))::uuid;
 end
 $BODY$;
