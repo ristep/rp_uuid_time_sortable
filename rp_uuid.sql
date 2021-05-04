@@ -1,3 +1,8 @@
+-- Depend on Extension: "uuid-ossp"
+-- if dosen't exist 
+-- DROP EXTENSION "uuid-ossp";
+-- CREATE EXTENSION "uuid-ossp" SCHEMA public VERSION "1.1";
+
 -- FUNCTION: public.rp_uuid()
 
 -- DROP FUNCTION public.rp_uuid();
