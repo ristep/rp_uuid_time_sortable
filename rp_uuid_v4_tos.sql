@@ -1,4 +1,5 @@
 -- Time ordered simple uuid generator
+-- Readable date-time
 DROP FUNCTION public.rp_uuid_v4_tos();
  
 CREATE OR REPLACE FUNCTION public.rp_uuid_v4_tos(
