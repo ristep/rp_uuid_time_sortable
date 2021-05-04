@@ -1,13 +1,15 @@
 -- Time ordered simple uuid generator
 -- Readable date-time
-DROP FUNCTION public.rp_uuid_v4_tos();
- 
+-- FUNCTION: public.rp_uuid_v4_tos()
+
+-- DROP FUNCTION public.rp_uuid_v4_tos();
+
 CREATE OR REPLACE FUNCTION public.rp_uuid_v4_tos(
 	)
-     RETURNS uuid
-     LANGUAGE ''
---     COST 100
---     VOLATILE PARALLEL UNSAFE
+    RETURNS uuid
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
 AS $BODY$
 begin
 -- 12345678-1234-v678-1234-567812345678
@@ -15,5 +17,5 @@ begin
 end
 $BODY$;
 
-ALTER FUNCTION public.rp_uuid_v4_time_order()
+ALTER FUNCTION public.rp_uuid_v4_tos()
     OWNER TO postgres;
