@@ -1,4 +1,4 @@
--- Time ordered simple uuid generator
+-- Time ordered simple uuid-v4 generator
 -- Readable date-time
 -- FUNCTION: public.rp_uuid_v4_tos()
 
